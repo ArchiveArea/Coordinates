@@ -1,0 +1,7 @@
+---
+name: Coordinates
+version: 0.0.1
+main: NhanAZ\Coordinates\Main
+api: 4.0.2
+src-namespace-prefix: NhanAZ\Coordinates
+...
