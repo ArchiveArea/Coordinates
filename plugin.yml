@@ -1,7 +1,10 @@
 ---
 name: Coordinates
-version: 0.0.1
+version: 1.0.0
 main: NhanAZ\Coordinates\Main
-api: 4.0.2
+api: 4.0.0
 src-namespace-prefix: NhanAZ\Coordinates
+author: NhanAZ
+description: Show coordinates like Minecraft Vanilla in the upper left corner of the screen when the player joins the server.
+website: https://github.com/NhanAZ
 ...
