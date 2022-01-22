@@ -5,6 +5,6 @@ main: NhanAZ\Coordinates\Main
 api: 4.0.0
 src-namespace-prefix: NhanAZ\Coordinates
 author: NhanAZ
-description: Show coordinates like Minecraft Vanilla in the upper left corner of the screen when the player joins the server.
+description: Show coordinates
 website: https://github.com/NhanAZ
 ...
