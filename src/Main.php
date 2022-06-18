@@ -10,20 +10,21 @@ use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\network\mcpe\protocol\types\BoolGameRule;
 use pocketmine\network\mcpe\protocol\GameRulesChangedPacket;
 
-class Main extends PluginBase implements Listener
-{
+class Main extends PluginBase implements Listener {
 
-	protected function onEnable() : void
-	{
+	private bool $value = true;
+	private bool $isPlayerModifiable = false;
+
+	protected function onEnable(): void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 
-	public function onJoin(PlayerJoinEvent $event)
-	{
+	public function onJoin(PlayerJoinEvent $event): void {
 		$player = $event->getPlayer();
 		$packet = new GameRulesChangedPacket();
-		$packet->gameRules = ["ShowCoordinates" => new BoolGameRule(true, false)];
+		$packet->gameRules = [
+			"ShowCoordinates" => new BoolGameRule($this->value, $this->isPlayerModifiable)
+		];
 		$player->getNetworkSession()->sendDataPacket($packet);
 	}
-
 }
